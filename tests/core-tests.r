@@ -214,4 +214,7 @@
 %system/file.test.reb
 %system/gc.test.reb
 %call/call.test.reb
+%command-line/base.test.reb
+%command-line/options.test.reb
+%command-line/resources.test.reb
 %source/analysis.test.reb
