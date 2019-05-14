@@ -38,14 +38,10 @@
         "--do" "print [system/options/home | system/options/resources]"
     ] data
 
-    any? [
-        ;data == newline    ;; means HOME wasn't set or found
-        wrap [
-            data: split data newline
-            (to-file data/1) == (first split-path to-file data/2)
-        ]
-    ]
+    data: split data newline
+    (to-file data/1) == (first split-path to-file data/2)
 ]
 
+;data == newline    ;; means HOME wasn't set or found  
 ;; TBD - need set-env HOME test - perhaps best in separate prog so won't pollute tests
 
